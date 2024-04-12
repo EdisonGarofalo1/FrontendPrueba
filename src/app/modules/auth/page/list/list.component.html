@@ -1,0 +1,61 @@
+
+<div class="card">
+    <div class="card-body"  >
+      <br>
+      <h1 class="titulo"> Lista personas activas e inactivas </h1>
+  
+  <br>
+ 
+  <br>
+      <table class="table table-hover">
+  
+  
+      <thead>
+        <tr class="table-dark">
+          <th >#</th>
+          <th >id</th>
+          <th >Nombre</th>
+          <th >Apellidos</th>
+          
+          <th >Identificacion</th>
+          <th >fecha Nacimiento</th>
+          
+          <th>Editar</th>
+          
+        </tr>
+  
+      
+      </thead>
+      <tbody>
+        <tr *ngFor=" let list of listaUser; let i= index" >
+            <td>{{i+1}}</td>
+          <td>{{list.idPersona}}</td>
+          <td>{{list.nombres}}  </td>
+          <td>{{list.apellidos}}</td>
+          <td>{{list.identificacion}}</td>
+          <td>{{list.fechaNacimiento}}</td>
+       
+          
+
+           
+          
+          <td style="width: 10%;" >
+            <button routerLink="/auth/auth/auth-update/{{list.idPersona}}" class="btn btn-primary btn-sm float-end">Editar</button>
+          
+          </td>
+        
+         
+       
+        
+    
+        </tr>
+        
+       
+      </tbody>
+      
+    </table>
+
+</div>
+  </div>
+    
+

@@ -1,0 +1,45 @@
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+  
+    <br>
+    <br>
+  
+  <h1 class="text-primary"> Login</h1>
+  <br>
+
+
+    <form  [formGroup]="loginForm" (ngSubmit)="login()">
+      <input type="text"
+       id="usernameOrEmail" 
+      class="fadeIn second"
+       name="usernameOrEmail"
+       formControlName="usernameOrEmail"
+       
+        placeholder="login"  >
+
+      
+      
+         
+
+    
+      <input type="text" id="password" 
+      class="fadeIn third" 
+      name="password"
+      
+      formControlName="password"
+       placeholder="password"
+     
+   >
+  
+      <input type="submit"   value="Log In">
+    </form>
+
+    <div id="formFooter">
+      <input type="button"  (click)="recuperar()" value="RECU">
+    </div>
+
+
+  </div>
+</div>
