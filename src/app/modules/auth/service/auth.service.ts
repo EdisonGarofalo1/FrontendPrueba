@@ -103,5 +103,12 @@ export class AuthService {
     );
     }
 
+    getPersonasid(id:number):Observable<Personas>{
 
+  
+      return this.http.get<Personas>(`${this.baseUrl}persona/ver/${id}`).pipe(
+          catchError(this.handleError)
+      );
+      }
+  
 }

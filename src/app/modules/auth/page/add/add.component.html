@@ -1,1 +1,59 @@
-<p>add works!</p>
+
+
+
+<form [formGroup]="fromAuth" (ngSubmit)="Guardar()" class="container mt-4">
+    <h1>
+      {{  'Editar Persona'  }}      
+    
+  </h1>
+  <!-- <input type="text" hidden formControlName="id" id="id" class="form-control"> -->
+  
+    <div class="row">
+        <div class="col-md-6">
+    <div >
+        <div class="form-group">
+          <label for="nombres">nombres:</label>
+          <input type="text" formControlName="nombres" id="nombres" class="form-control">
+          
+        </div>
+        
+        <div class="form-group">
+          <label for="identificacion">identificacion:</label>
+          <input type="text" formControlName="identificacion" id="identificacion" class="form-control">
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+    <div class="form-group">
+      <label for="fechaNacimiento">fechaNacimiento:</label>
+      <input type="date" formControlName="fechaNacimiento" id="fechaNacimiento" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <label for="apellidos">apellidos:</label>
+      <input type="text" formControlName="apellidos" id="apellidos" class="form-control">
+    </div>
+    
+</div>
+
+
+
+
+
+</div>
+<br>
+<div class="row mt-3">
+    <div class="col-md-2">
+        <button type="button" class="btn btn-danger" (click)="salir()">Cancelar</button>
+      
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary" [disabled]="fromAuth.invalid" >  {{  'Actualizar'  }}</button>
+    </div>
+   
+</div>
+
+  </form>
